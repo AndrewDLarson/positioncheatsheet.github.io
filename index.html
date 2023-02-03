@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Positioning Cheatsheet</title>
+        <link href="./styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Display and Positioning Cheatsheet</h1>
+
+            <ul id="navigation">
+                <li><a href="#fixed">Fixed position</a></li>
+                <li><a href="#absolute">Absolute position</a></li>
+                <li><a href="#static">Static position</a></li>
+                <li><a href="#relative">Relative position</a></li>
+                <li><a href="#sticky">Sticky position</a></li>
+                <li>Z-index property</li>
+                <li>Display property</li>
+                <li>Float property</li>
+                <li>Clear Property</li>
+                
+            </ul>
+
+        </header>
+
+        <main>
+            <div id="fixed">
+                <h2>Fixed position</h2>
+                <div class="lesson">
+                    <p class="discription">
+                        The fixed position removes the element from the document flow. No space is created in the document for the element.
+                        The element is pinned to that exact spot on the page. The element will stay the same regardless of scroling.
+                        You must then position the rest of the page below the fixed element or they will overlap. This can be done with position: relative;
+                    </p>
+                    <p class="example">
+                        <strong>EXAMPLE:</strong> is shown in header. It stays stationary as you scroll the page.<br>
+                    </p>
+                </div>
+            </div>
+            
+            <div id="absolute">
+                <h2>absolute position</h2>
+                <div class="lesson">
+                    <p class="discription">
+                        Positions an element in a parent element that has the position relative or absolute. Ignores all sibling elements, 
+                        so it is possible they overlap if they are not centered correctly.
+                    </p>
+                    <p class="example">
+                        <strong>EXAMPLE</strong> The green square is positioned with absolute inside its parent element, the purple square. I can move the green 
+                        square around inside the purple square by adjusting the top, right, left, and bottom.
+                    </p>
+                    <div class="example" id="square1">
+                        <div id="square2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="static">
+                <h2>static position</h2>
+                <div class="lesson">
+                    <p class="discription">
+                        Static is how the HTML looks without any CSS moveing elements around.
+                        This is the default.
+                    </p>
+                    <p class="example" id="staticbox">
+                        <strong>EXAMPLE:</strong> There has been no adjustment to the position of this box. <br>
+                        (asside from the inline-block display)
+                    </p>
+                </div>
+            </div>
+
+            <div id="relative">
+                <h2>Relative position</h2>
+                <div class="lesson">
+                    <p class="discription">
+                        Lets an element be positioned relative to its static position. Without any offset properties, 
+                        the element will remain in its static position.
+                    </p>
+                    <div class="example">
+                        <p><strong>EXAMPLE:</strong></p>
+                        <div id="relativeoriginal">
+                            <p>original spot <br> static position</p>
+                        </div>
+                        <div id="relativemoved">
+                            <p>position: relative <br> left: 150px;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sticky">
+                <h2>sticky position</h2>
+                <div class="lesson">
+                    <p class="discription">
+                        Allows and element to move around the page as its being scrolled from one set position to another.
+                        To set the position, use: top, right, bottom, and left.
+                    </p>
+                    <p class="example">
+                        <strong>EXAMPLE:</strong><br>The footer has the position of sticky and it follows 
+                        along as you scroll.
+                    </p>
+                </div>
+            </div>
+
+
+
+
+
+        </main>
+
+        <footer>
+            <P>This site was made my Andrew Larson</P>
+
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+</html>
