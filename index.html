@@ -1,195 +1,178 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Positioning Cheatsheet</title>
-        <link href="./styles.css" rel="stylesheet">
-    </head>
+* {
+    margin: 0;
+    padding: 0;
+}
 
-    <body>
-
-        <header>
-            <h1>Display and Positioning Cheatsheet</h1>
-
-            <ul id="navigation">
-                <li><a href="#fixed">Fixed position</a></li>
-                <li><a href="#absolute">Absolute position</a></li>
-                <li><a href="#static">Static position</a></li>
-                <li><a href="#relative">Relative position</a></li>
-                <li><a href="#sticky">Sticky position</a></li>
-                <li><a href="#zindex">Z-index property</a></li>
-                <li><a href="#display">Display property</a></li>
-                <li><a href="#float">Float property</a></li>
-                <li><a href="#clear">Clear Property</a></li>
-                
-            </ul>
-
-        </header>
-
-        <main>
-            <div id="fixed">
-                <h2>Fixed position</h2>
-                <div class="lesson">
-                    <p class="discription">
-                        The fixed position removes the element from the document flow. No space is created in the document for the element.
-                        The element is pinned to that exact spot on the page. The element will stay the same regardless of scroling.
-                        You must then position the rest of the page below the fixed element or they will overlap. This can be done with position: relative;
-                    </p>
-                    <p class="example">
-                        <strong>EXAMPLE:</strong> is shown in header. It stays stationary as you scroll the page.<br>
-                    </p>
-                </div>
-            </div>
-            
-            <div id="absolute">
-                <h2>absolute position</h2>
-                <div class="lesson">
-                    <p class="discription">
-                        Positions an element in a parent element that has the position relative or absolute. Ignores all sibling elements, 
-                        so it is possible they overlap if they are not centered correctly.
-                    </p>
-                    <p class="example">
-                        <strong>EXAMPLE</strong> The green square is positioned with absolute inside its parent element, the purple square. I can move the green 
-                        square around inside the purple square by adjusting the top, right, left, and bottom.
-                    </p>
-                    <div class="example" id="square1">
-                        <div id="square2"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="static">
-                <h2>static position</h2>
-                <div class="lesson">
-                    <p class="discription">
-                        Static is how the HTML looks without any CSS moveing elements around.
-                        This is the default.
-                    </p>
-                    <p class="example" id="staticbox">
-                        <strong>EXAMPLE:</strong> There has been no adjustment to the position of this box. <br>
-                        (asside from the inline-block display)
-                    </p>
-                </div>
-            </div>
-
-            <div id="relative">
-                <h2>Relative position</h2>
-                <div class="lesson">
-                    <p class="discription">
-                        Lets an element be positioned relative to its static position. Without any offset properties, 
-                        the element will remain in its static position.
-                    </p>
-                    <div class="example">
-                        <p><strong>EXAMPLE:</strong></p>
-                        <div id="relativeoriginal">
-                            <p>original spot <br> static position</p>
-                        </div>
-                        <div id="relativemoved">
-                            <p>position: relative <br> left: 150px;</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="sticky">
-                <h2>sticky position</h2>
-                <div class="lesson">
-                    <p class="discription">
-                        Allows and element to move around the page as its being scrolled from one set position to another.
-                        To set the position, use: top, right, bottom, and left.
-                    </p>
-                    <p class="example">
-                        <strong>EXAMPLE:</strong><br>The footer has the position of sticky and it follows 
-                        along as you scroll.
-                    </p>
-                </div>
-            </div>
-
-            <div id="zindex">
-                <h2>Z-index property</h2>
-                <div class="lesson">
-                    <p class="discription">
-                        The level that the element is on. Almost like paper overlaping, 0 is the lowest and 10 is on top.
-                    </p>
-                    <p class="example" id="zindexbox1">
-                        <strong>EXAMPLE:</strong> This box has a z-index of 1, while the orange box has a z-index of 0.
-                    </p>
-                    <div id="zindexbox2"></div>
-                </div>
-            </div>
-
-            <div id="display">
-                <h2>display property</h2>
-                <div class="lesson">
-                    <p class="discription">
-                        Determines the type of block an element will have.
-                        Elements can have: block, inline, and inline-block displays
-                    </p>
-                    <p class="example">
-                        <strong>EXAMPLE:</strong> The blue explenation boxes and the green example boxes have inline-box display. meaning they are boxes that can be on the same line.
-                        <br>
-                        <br>
-                        The heading "Display and Positioning Cheatsheet" would be considered a block display taking up its line.
-                        <br>
-                        <br>
-                        The "example:" in this square is an inline display, as it can stay in a line of other text.
-                    </p>
-                </div>
-            </div>
-
-            <div id="float">
-                <h2>float property</h2>
-                <div class="lesson">
-                    <p class=" discription">
-                        An element is floated to the left or right and other elements will wrap around it.
-                    </p>
-                    <p class="example">
-                        <strong id="floater">EXAMPLE:</strong> This set of text wraps around the example tag. In order for it to wrap around though, 
-                        it would have to be long enough to take up all the space on the right side and then continue to take up space underneath.
-                    </p>
-                </div>
-            </div>
-
-            <div id="clear">
-                <h2>clear property</h2>
-                <div class="lesson">
-                    <p class="discription">
-                        Tells an element how to behave when it bumps into another element in the same container.
-                    </p>
-                    <div class="example">
-                        <strong id="clearer">EXAMPLE:</strong> <p id="needclear">The "example" is floated to the left. But we dont want 
-                        this text to wrap around, so we add 'clear: left' to the this element.</p>
-                    </div>
-                </div>
-            </div>
+html {
+    background-color: beige;
+}
 
 
+/* styles for the head*/
 
-            
 
-        </main>
+ header {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: red;
+    z-index: 2;
+    height: 250px;
+    box-sizing: border-box;
+    padding: 45px;
+    overflow: scroll;
+}
 
-        <footer>
-            <P>This site was made by Andrew Larson</P>
+header h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    
+}
 
-        </footer>
+#navigation li {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 0 5px;
+}
 
 
 
 
+/*styles for the main*/
+
+main {
+    position: relative;
+    top: 250px;
+    background-color: beige;
+
+}
+
+h2 {
+    text-align: center;
+    text-transform: capitalize;
+    background-color: black;
+    color: red;
+    font-family:'Courier New', Courier, monospace
+}
+
+.lesson {
+    margin: 50px;
+    position: relative;
+    
+}
+
+.discription {
+    display: inline-block;
+    width: 500px;
+    margin: 10px 50px;
+    background-color: lightblue;
+}
+
+.example {
+    display: inline-block;
+    width: 500px;
+    margin: 10px 5px;
+    background-color: lightgreen;
+    
+}
+    
+#square1 {
+    background-color: blueviolet;
+    width: 150px;
+    height: 150px
+}
+
+#square2 {
+    Background-color: green;
+    width: 50px;
+    height: 50px;
+}
+
+
+#pxright {
+    position: relative;
+    left: 150px;
+}
+
+#relativeoriginal {
+    width: 125px;
+    position: absolute;
+    background-color:yellow;
+}
+
+#relativemoved {
+    width: 125px;
+    position: relative;
+    left: 200px;
+    background-color: yellow;
+}
+
+#zindexbox1 {
+    position:absolute;
+    z-index: 1;
+
+}
+
+#zindexbox2 {
+    height: 75px;
+    width: 150px;
+    background-color: orange;
+    display: inline-block;
+    position: absolute;
+}
+
+#floater {
+    float: left;
+    font-size: 26px;
+}
+
+#clearer {
+    float: left;
+    font-size: 26px;
+}
+
+#needclear {
+    clear: left;
+}
+
+#csstable {
+    align-content: center; 
+}
+
+table {
+    text-align: center;
+    border: 3px solid grey;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(228, 128, 219)
+}
+
+ th, td {
+    border: 3px solid grey;
+ }
+
+th {
+    font-size: 24px;
+    background-color:chocolate
+}
 
 
 
 
+/*styles for the footer*/
 
 
+footer{
+    background-color: black;
+    color: white;
+    position: sticky;
+    bottom: 1px;
+    margin-top: 300px;
+    
+}
 
-    </body>
-
-
-
-
-
-
-
-
-</html>
+footer p {
+    margin-left: 50px;
+    font-size: 30px;
+    
+}
