@@ -1,5 +1,6 @@
 * {
-    border: 1px dotted red;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -13,10 +14,15 @@
     width: 100%;
     background-color: red;
     z-index: 2;
+    height: 250px;
+    box-sizing: border-box;
+    padding: 50px;
+    overflow: scroll;
 }
 
 header h1 {
     font-size: 60px;
+    margin-bottom: 50px;
     
 }
 
@@ -32,20 +38,25 @@ header h1 {
 /*styles for the main*/
 
 main {
-    position: static;
-    margin-top: 250px;
+    position: relative;
+    top: 250px;
     margin-bottom: 100px;
+    background-color: beige;
 
 }
 
 h2 {
     text-align: center;
     text-transform: capitalize;
+    background-color: black;
+    color: red;
+    font-family:'Courier New', Courier, monospace
 }
 
 .lesson {
     margin: 50px;
     position: relative;
+    
 }
 
 .discription {
@@ -53,6 +64,8 @@ h2 {
     width: 500px;
     margin: 10px 50px;
     background-color: lightblue;
+    
+
 }
 
 .example {
@@ -60,6 +73,7 @@ h2 {
     width: 500px;
     margin: 10px 5px;
     background-color: lightgreen;
+    
 }
     
 #square1 {
@@ -96,11 +110,33 @@ h2 {
     background-color: yellow;
 }
 
+#zindexbox1 {
+    position:absolute;
+    z-index: 1;
 
+}
 
+#zindexbox2 {
+    height: 75px;
+    width: 150px;
+    background-color: orange;
+    display: inline-block;
+    position: absolute;
+}
 
+#floater {
+    float: left;
+    font-size: 26px;
+}
 
+#clearer {
+    float: left;
+    font-size: 26px;
+}
 
+#needclear {
+    clear: left;
+}
 
 
 /*styles for the footer*/
@@ -111,8 +147,10 @@ footer{
     color: white;
     position: sticky;
     bottom: 1px;
+    margin-top: 300px;
 }
 
 footer p {
     margin-left: 50px;
+    
 }
