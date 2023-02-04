@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Positioning Cheatsheet</title>
-        <link href="./style.css" rel="stylesheet">
+        <link href="./styles.css" rel="stylesheet">
     </head>
 
     <body>
@@ -16,10 +16,10 @@
                 <li><a href="#static">Static position</a></li>
                 <li><a href="#relative">Relative position</a></li>
                 <li><a href="#sticky">Sticky position</a></li>
-                <li>Z-index property</li>
-                <li>Display property</li>
-                <li>Float property</li>
-                <li>Clear Property</li>
+                <li><a href="#zindex">Z-index property</a></li>
+                <li><a href="#display">Display property</a></li>
+                <li><a href="#float">Float property</a></li>
+                <li><a href="#clear">Clear Property</a></li>
                 
             </ul>
 
@@ -104,9 +104,67 @@
                 </div>
             </div>
 
+            <div id="zindex">
+                <h2>Z-index property</h2>
+                <div class="lesson">
+                    <p class="discription">
+                        The level that the element is on. Almost like paper overlaping, 0 is the lowest and 10 is on top.
+                    </p>
+                    <p class="example" id="zindexbox1">
+                        <strong>EXAMPLE:</strong> This box has a z-index of 1, while the orange box has a z-index of 0.
+                    </p>
+                    <div id="zindexbox2"></div>
+                </div>
+            </div>
+
+            <div id="display">
+                <h2>display property</h2>
+                <div class="lesson">
+                    <p class="discription">
+                        Determines the type of block an element will have.
+                        Elements can have: block, inline, and inline-block displays
+                    </p>
+                    <p class="example">
+                        <strong>EXAMPLE:</strong> The blue explenation boxes and the green example boxes have inline-box display. meaning they are boxes that can be on the same line.
+                        <br>
+                        <br>
+                        The heading "Display and Positioning Cheatsheet" would be considered a block display taking up its line.
+                        <br>
+                        <br>
+                        The "example:" in this square is an inline display, as it can stay in a line of other text.
+                    </p>
+                </div>
+            </div>
+
+            <div id="float">
+                <h2>float property</h2>
+                <div class="lesson">
+                    <p class=" discription">
+                        An element is floated to the left or right and other elements will wrap around it.
+                    </p>
+                    <p class="example">
+                        <strong id="floater">EXAMPLE:</strong> This set of text wraps around the example tag. In order for it to wrap around though, 
+                        it would have to be long enough to take up all the space on the right side and then continue to take up space underneath.
+                    </p>
+                </div>
+            </div>
+
+            <div id="clear">
+                <h2>clear property</h2>
+                <div class="lesson">
+                    <p class="discription">
+                        Tells an element how to behave when it bumps into another element in the same container.
+                    </p>
+                    <div class="example">
+                        <strong id="clearer">EXAMPLE:</strong> <p id="needclear">The "example" is floated to the left. But we dont want 
+                        this text to wrap around, so we add 'clear: left' to the this element.</p>
+                    </div>
+                </div>
+            </div>
 
 
 
+            
 
         </main>
 
